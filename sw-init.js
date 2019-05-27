@@ -5,6 +5,6 @@ if (navigator.serviceWorker) {
   })
 
   .catch(function() {
-    console.log("Didn't installed Service Worker")
+    console.log("Didn't installed Service Worker");
   })
 }

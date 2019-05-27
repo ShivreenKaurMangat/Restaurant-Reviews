@@ -1,7 +1,7 @@
-const currentCache = 'myCache1';
+const currentCache = 'myCache';
 
 self.addEventListener('install', function(event) {
-  event.waitUntil(
+  event.waitUntill(
     caches.open(currentCache).then(function(newCache) {
       return newCache.addAll(
         [
@@ -43,7 +43,7 @@ self.addEventListener('activate', function(event) {
     caches.keys().then(function(cachedNames) {
       return Promise.all(
         cachedNames.filter(function(cachedName) {
-          return cachedName.startsWith("myCache1") && cachedName != currentCache;
+          return cachedName.startsWith("myCache") && cachedName != currentCache;
         }).map(function(cachedName) {
           return caches.delete(cachedName);
         })
