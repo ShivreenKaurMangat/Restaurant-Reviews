@@ -1,7 +1,7 @@
-const currentCache = 'myCache-v2';
+const currentCache = 'myCache-v1';
 
 self.addEventListener('install', function(event) {
-  event.waitUntill(
+  event.waitUntil(
     caches.open(currentCache).then(function(newCache) {
       return newCache.addAll(
         [
@@ -39,7 +39,7 @@ self.addEventListener('install', function(event) {
 })
 
 self.addEventListener('activate', function(event) {
-  event.waitUntill(
+  event.waitUntil(
     caches.keys().then(function(cachedNames) {
       return Promise.all(
         cachedNames.filter(function(cachedName) {
