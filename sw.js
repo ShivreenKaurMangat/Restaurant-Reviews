@@ -1,4 +1,4 @@
-const currentCache = 'myCache-v1';
+const currentCache = 'myCache-v2';
 
 self.addEventListener('install', function(event) {
   event.waitUntill(
