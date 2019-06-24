@@ -1,7 +1,7 @@
 ## Restaurant-Reviews-App
 
 ### Languages and technologies used:
-> HTML
+1.HTML
 > CSS
 > JavaScript
 > Service Worker
